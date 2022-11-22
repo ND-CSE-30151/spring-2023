@@ -1,0 +1,24 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.title, .subtitle { 
+    font-family: 'Roboto Slab', sans-serif;
+    font-weight: normal;
+}
+
+dl.info dt { float: left; padding-right: 0.5em; font-weight: bold; }
+dl.info dd { margin: 0; }
+
+code {
+    color: #000;
+}
+
+table.invisible, table.invisible td { border: none; }
+
+table.honorcode { width: 80%; margin: 0 auto; }
+table.honorcode td, table.honorcode th { border-style: none; padding: 12px 15px; }
+
+.old {
+    color: #999;
+}

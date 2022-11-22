@@ -1,0 +1,417 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>CSE 30151: Theory of Computing</title>
+
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300,100" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,700,300,100" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+<link rel="stylesheet" href="css/theory.css">
+
+</head>
+
+<body>
+
+  <section class="hero is-dark">
+  <div class="hero-body">
+      <div class="container">
+        <div class="columns is-vcentered">
+          <div class="column is-2-desktop is-3-tablet">
+            <img src="images/antikythera.svg" class="is-hidden-mobile is-pulled-right" style="max-height: 200px; filter: invert(100%);">
+          </div>
+          <div class="column">
+            <h1 class="title is-1">
+              Theory of Computing
+            </h1>
+            <h2 class="subtitle is-3">
+              CSE 30151 | Spring 2023
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
+
+  <section class="section">
+
+    <div class="container">
+
+      <a name="overview"></a>
+      <h1 class="title">Overview</h1>
+
+      <div class="columns">
+        
+        <div class="column">
+          
+          <div class="content">
+            <dl class="info">
+              <dt>
+              <dt>Time</dt><dd>TTh 2&ndash;3:15pm</dd>
+              <dt>Location</dt> <dd>127 Hayes-Healy</dd>
+              <dt>Instructor</dt> <dd><a href="http://www.nd.edu/~dchiang">David Chiang</a></dd>
+            </dl>
+            
+            <dl class="info">
+              <dt>Prerequisites</dt>
+              <dd><i>Discrete Mathematics</i> (CSE 20110) or equivalent. You especially need to be comfortable with sets, tuples, functions, relations, and graphs; and writing proofs by contradiction and by induction.</dd>
+              <dd><i>Data Structures</i> (CSE 20311) or equivalent will be needed for programming assignments; however, please contact the instructor if you are not a computer science/engineering major.</dd>
+            </dl>
+
+            <dl class="info">
+              <dt>Required text</dt>
+              <dd>
+                <img src="images/sipser3i.jpg" class="is-pulled-right" style="max-width: 100px; padding-left: 10px">
+                Michael Sipser, <em>Introduction to the Theory of Computation</em><br>3rd International Edition<br>
+                ISBN: 9781133187813, 9788131525296<br>
+                Price: usually $15–20 (<a href="http://www.amazon.com/dp/8131525295">Amazon</a>)<br>
+                <a href="http://www-math.mit.edu/~sipser/itoc-errs3.1.html">Errata</a>
+              </dd>
+            </dl>
+
+          </div> <!-- content -->
+
+        </div> <!-- column -->
+        
+        <div class="column">
+          
+          <div class="content">
+
+            <dl class="info"><dt>Description</dt> <dd>Introduction to formal languages and automata, computability theory, and complexity theory with the goal of developing understanding of the power and limits of different computational models. Topics covered include:
+            <ul>
+              <li>regular languages and finite automata</li>
+              <li>context-free grammars and pushdown automata</li>
+              <li>Turing machines; undecidable languages</li>
+              <li>the classes P and NP; NP completeness</li>
+            </ul>
+              </dd>
+            </dl>
+            <dl class="info">
+              <dt>Links</dt>
+              <dd>The following sites will be used in this course:
+                <ul>
+                  <!--<li><a href="https://piazza.com/nd/fall2020/cse30151">Piazza</a> for questions and answers</li>-->
+                  <li>Notes and assignments will be linked from here, but you can also clone the <a href="https://github.com/ND-CSE-30151/spring-2023">Github repository</a></li>
+                </ul>
+              </dd>
+            </dl>
+
+          </div> <!-- content -->
+        </div> <!-- column -->
+      </div> <!-- columns -->
+
+      <a name="staff"></a>
+      <h1 class="title">Staff</h1>
+
+      <div class="columns">
+
+        <div class="column">
+          <div class="columns is-mobile">
+            
+        <div class="column is-half">
+          <img class="image" src="images/chiang.png"><br>
+          Instructor<br>
+          <a href="https://www.nd.edu/~dchiang">David Chiang</a><br>
+          dchiang@nd.edu<br>
+          179 Fitzpatrick
+        </div>
+
+        <div class="column is-half">
+        </div>
+
+          </div>
+        </div>
+
+        <!--
+        <div class="column">
+          <div class="columns is-mobile">
+            
+            <div class="column is-half">
+            </div>
+            
+            <div class="column is-half">
+            </div>
+            
+          </div>
+        </div> -->
+        
+      </div>
+          
+      <a name="schedule"></a>
+      <h1 class="title">Schedule</h1>
+      
+      <div class="columns">
+        <div class="column">
+          <div class="content">
+            <p>Notes are posted as Jupyter notebooks. If you want to fiddle with the examples, install <a href="https://github.com/ND-CSE-30151/tock">Tock</a>, clone the <a href="https://github.com/ND-CSE-30151/spring-2023">Git repository</a>, and run <code>jupyter notebook</code> in your working copy.</p>
+            
+            <p>Unless otherwise indicated, each assignment is due on Friday at 5pm of the week in which it is listed.</p>
+
+            <p>This schedule is from my last offering of the course (Fall 2020) and is subject to change.</p>
+            
+            <table class="schedule">
+              <thead>
+                <tr>
+                  <th>Unit</th>
+                  <th>Week of</th>
+                  <th>Topic</th>
+                  <th>Assignment Due</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td></td>
+                  <td>08/10</td>
+                  <td><a href="http://nbviewer.ipython.org/github/ND-CSE-30151/fall-2020/blob/master/notes/week01/week01.ipynb">Introduction and background</a>
+                  <td></td>
+                </tr>
+                <tr class="unit">
+                  <td rowspan="3">I</td>
+                  <td>08/17</td>
+                  <td><a href="http://nbviewer.ipython.org/github/ND-CSE-30151/fall-2020/blob/master/notes/week02/week02.ipynb">Finite automata</a></td>
+                  <td><a href="../hw/hw1.pdf">HW1</a></td>
+                </tr>
+                <tr class="unit">
+                  <td>08/24</td>
+                  <td><a href="http://nbviewer.ipython.org/github/ND-CSE-30151/fall-2020/blob/master/notes/week03/week03.ipynb">Regular expressions</a></td>
+                  <td><a href="../hw/hw2.pdf">HW2</a></td>
+                </tr>
+                <tr class="unit">
+                  <td>08/31</td>
+                  <td><a href="http://nbviewer.ipython.org/github/ND-CSE-30151/fall-2020/blob/master/notes/week04/week04.ipynb">Non-regular languages </a></td>
+                  <td>Quiz</td>
+                </tr>
+                <tr>
+                  <td rowspan="3">II</td>
+                  <td>09/07</td>
+                  <td><a href="http://nbviewer.ipython.org/github/ND-CSE-30151/fall-2020/blob/master/notes/week05/week05.ipynb">Context free grammars, pushdown automata </a></td>
+                  <td><a href="../hw/hw3.pdf">HW3</a></td>
+                </tr>
+                <tr class="unit">
+                  <td>09/14</td>
+                  <td><a href="http://nbviewer.ipython.org/github/ND-CSE-30151/fall-2020/blob/master/notes/week06/week06.ipynb">CFG = PDA</a></td>
+                  <td><a href="../hw/hw4.pdf">HW4</a></td>
+                </tr>
+                <tr class="unit">
+                  <td>09/21</td>
+                  <td><a href="http://nbviewer.ipython.org/github/ND-CSE-30151/fall-2020/blob/master/notes/week07/week07.ipynb">Non-context-free languages</a></td>
+                  <td>Midterm exam</td>
+                </tr>
+                <tr class="unit">
+                  <td rowspan="4">III</td>
+                  <td>09/28</td>
+                  <td><a href="http://nbviewer.ipython.org/github/ND-CSE-30151/fall-2020/blob/master/notes/week08/week08.ipynb">Turing machines</a></td>
+                  <td></td>
+                </tr>
+                <!--<tr>
+                  <td colspan="2"></td> <td>Spring break</td> <td></td>
+                </tr>-->
+                <tr class="unit">
+                  <td>10/05</td>
+                  <td><a href="http://nbviewer.ipython.org/github/ND-CSE-30151/fall-2020/blob/master/notes/week09/week09.ipynb">TM variants and the universal TM</a></td> <td><a href="../hw/hw5.pdf">HW5</a></td>
+                </tr>
+                <tr class="unit">
+                  <td>10/12</td>
+                  <td><a href="http://nbviewer.ipython.org/github/ND-CSE-30151/fall-2020/blob/master/notes/week10/week10.ipynb">Undecidability</a></td>
+                  <td><a href="../hw/hw6.pdf">HW6</a></td>
+                </tr>
+                <tr class="unit">
+                  <td>10/19</td>
+                  <td><a href="http://nbviewer.ipython.org/github/ND-CSE-30151/fall-2020/blob/master/notes/week11/week11.ipynb">Proving undecidability by reductions</a></td>
+                  <td>Quiz</td>
+                </tr>
+                <tr class="unit">
+                  <td rowspan="3">IV</td>
+                  <td>10/26</td>
+                  <td><a href="http://nbviewer.ipython.org/github/ND-CSE-30151/fall-2020/blob/master/notes/week12/week12.ipynb">P and NP</a></td>
+                  <td><a href="../hw/hw7.pdf">HW7</a></td>
+                </tr>
+                <tr class="unit">
+                  <td>11/02</td>
+                  <td><a href="http://nbviewer.ipython.org/github/ND-CSE-30151/fall-2020/blob/master/notes/week13/week13.ipynb">NP-completeness</a></td>
+                  <td><a href="../hw/hw8.pdf">HW8</a></td> 
+                </tr>
+                <tr class="unit">
+                  <td>11/09</td>
+                  <td><a href="http://nbviewer.ipython.org/github/ND-CSE-30151/fall-2020/blob/master/notes/week14/week14.ipynb">Proving NP-completeness by reductions</a></td> 
+                  <td></td> 
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>11/16</td><td><td>Final exam</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div> <!-- content -->
+        </div> <!-- column -->
+      </div> <!-- columns -->
+
+      <a name="requirements"></a>
+      <h1 class="title">Requirements</h1>
+
+      <div class="columns">
+        <div class="column">
+
+          <div class="content">
+
+            <table>
+              <thead>
+                <tr> <th>Component</th> <th>Points</th> </tr>
+              </thead>
+              <tbody>
+                <tr> <td>Homework</td> <td>8 &times; 30</td> </tr>
+                <tr> <td>Programming projects</td> <td>4 &times; 30</td> </tr>
+                <tr> <td>Midterm exam</td> <td>120</td> </tr>
+                <tr> <td>Final exam</td> <td>120</td> </tr>
+              </tbody>
+              <tfoot>
+                <tr> <th>Total</th> <td>600</td> </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+          
+        <div class="column">
+          <div class="content">
+            <table>
+              <thead>
+                <tr><th>Grade</th><th>Points</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>A<br>A&minus;</td>          <td>560&ndash;600<br>540&ndash;559</td> </tr>
+                <tr><td>B+<br>B<br>B&minus;</td>    <td>520&ndash;539<br>500&ndash;519<br>480&ndash;499</td> </tr>
+                <tr><td>C+<br>C<br>C&minus;</td>    <td>460&ndash;479<br>440&ndash;459<br>420&ndash;439</td> </tr>
+<tr><td>D</td>        <td>360&ndash;419</td> </tr>
+                <tr><td>F</td>                      <td>0&ndash;359</td>   </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <a name="project"></a>
+      <h1 class="title">Project</h1>
+
+      <div class="content">
+        <p>Throughout the semester, you will implement some of the ideas you've learned in a series of text-processing tools.</p>
+        <ul><li>You can work in teams of up to three. Each team member should contribute a roughly equal amount of work.</li>
+          <li>You can write in C++ (including all standard libraries except <code>&lt;regex></code>) or Python (including all standard libraries except <code>re</code>). Python is recommended. You can also write in another language with permission from the instructor.</li>
+        </ul>
+      </div>
+      
+      <div class="columns">
+        <div class="column">
+          <div class="content">
+            <p>In <a href="http://nbviewer.jupyter.org/github/ND-CSE-30151-SP20/theory-project-skeleton/blob/master/doc/cp1.pdf">Project 1</a>, you'll implement nondeterministic finite automata (NFA). Nondeterminism (essentially, unbounded parallelism) is one of the core concepts in the course, and implementing it will demonstrate how to simulate nondeterminism on deterministic hardware.</p>
+          </div>
+        </div>
+            
+        <div class="column">
+          <div class="content">
+            <p>In <a href="http://nbviewer.jupyter.org/github/ND-CSE-30151-SP20/theory-project-skeleton/blob/master/doc/cp2.pdf">Project 2</a>, you'll write a parser for regular expressions and combine it with NFAs to build a regular expression matcher like grep. Your implementation will be asymptotically <em>much</em> faster than an implementation that uses Perl or Python's built-in regular expressions.</p>
+          </div>
+        </div>
+        
+        <div class="column">
+          <div class="content">
+            <p>In <a href="http://nbviewer.jupyter.org/github/ND-CSE-30151-SP20/theory-project-skeleton/blob/master/doc/cp3.pdf">Project 3</a>, you'll use your regular expression engine to implement a fragment of sed. You'll also show how, in principle, any computer program could be compiled into this fragment of sed.</p>
+          </div>
+        </div>
+            
+        <div class="column">
+          <div class="content">
+            <p>In <a href="http://nbviewer.jupyter.org/github/ND-CSE-30151-SP20/theory-project-skeleton/blob/master/doc/cp4.pdf">Project 4</a>, you'll extend your regular expression matcher to handle backreferences. You'll show how this extended matcher can be used to (slowly) solve the Boolean satisfiability problem and therefore any problem in NP.</p>
+          </div>
+        </div>
+      </div>
+
+      <a name="policies"></a>
+      <h1 class="title">Policies</h1>
+
+      <div class="columns">
+        <div class="column">
+          <div class="content">
+            <div class="title is-4">Attendance</div>
+            <p>Students are expected to attend all classes. Foreseeable unexcused absences should be discussed with the instructor ahead of time.</p>
+            
+            <div class="title is-4">Late Work</div>
+            <p>For excused absences (e.g., documented illness, travel for athletics, job interview), coursework submissions will be accepted late by the same number of days as the excused absence.</p>
+            <p>Otherwise, you may submit some problems on time for full credit, and other problems late for a penalty. No problem can be submitted more than once. The late penalty increases by 10% per day and stops increasing when it reaches 50%; thereafter, it remains at 50% until the final exam date, after which no work may be submitted.</p>
+            
+            <div class="title is-4">Copyright</div>
+            <p>All course materials written by the instructor and published on this website are licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>, which prohibits reuse for commercial purposes.</p>
+            <p>All course materials written by the instructor and distributed privately (including through Sakai) should not be redistributed in any way; doing so is a violation of both US copyright law and the University of Notre Dame Honor Code.</p>
+            
+          </div> <!-- content -->
+        </div> <!-- column -->
+        
+        <div class="column">
+
+          <div class="content">
+          
+            <div class="title is-4">Honor Code</div>
+            
+            <p>Students in this course are expected to abide by the Academic Code of Honor Pledge: “As a member of the Notre Dame community, I will not participate in or tolerate academic dishonesty.”</p>
+            
+            <p>The following table summarizes how you may work with other students and use printed/online sources:
+              <table class="honorcode">
+                <tbody><tr>
+                    <td></td>
+                    <th>Resources</th>
+                    <th>Solutions</th>
+                  </tr>
+                  
+                  <tr>
+                    <th>Consulting</th>
+                    <td id="consult-resource-cell" bgcolor="#93c47d">allowed</td>
+                    <td id="consult-solution-cell" bgcolor="#ffd966">cite</td>
+                  </tr>
+                  
+                  <tr>
+                    <th>Copying</th>
+                    <td id="copy-resource-cell" bgcolor="ffd966">cite</td>
+                    <td id="copy-solution-cell" bgcolor="#e06666">not allowed</td>
+                  </tr>
+              </tbody></table>
+              See the <a href="https://cse.nd.edu/undergraduates/honor-code">CSE Guide to the Honor Code</a> for definitions of the above terms.</p>
+            
+            <p>If an instructor sees behavior that is, in his judgement, academically dishonest, he is required to file either an Honor Code Violation Report or a formal report to the College of Engineering Honesty Committee.</p>
+            
+            <div class="title is-4">Students with Disabilities</div>
+            <p>Any student who has a documented disability and is registered with Disability Services should speak with the professor as soon as possible regarding accommodations. Students who are not registered should contact the <a href="http://disabilityservices.nd.edu/">Office of Disability Services</a>.</p>
+            
+          </div> <!-- content -->
+        </div> <!-- column -->
+      </div> <!-- columns -->
+      
+      <a name="misc"></a>
+      <h1 class="title">Miscellaneous</h1>
+      
+      <div class="title is-4">Further Reading</div>
+      <div class="columns">
+        <div class="column">
+          <div class="content">
+            <table class="invisible books">
+              <tr><td><img src="https://images-na.ssl-images-amazon.com/images/I/51eho8qelpL._SX309_BO1,204,203,200_.jpg"></td> <td><i>The Universal Computer: The Road from Leibniz to Turing</i> by Martin Davis. Short biographies of the pioneers of computability theory and their contributions.</td></tr>
+              <tr><td><img src="https://images-na.ssl-images-amazon.com/images/I/51du7ChkDML._SX332_BO1,204,203,200_.jpg"></td> <td><i>The Annotated Turing</i> by Charles Petzold. Contains the text of Turing's 1936 paper with detailed and understandable commentary.</td></tr>
+            </table>
+          </div> <!-- content -->
+        </div> <!-- column -->
+        <div class="column">
+          <div class="content">
+            <table class="invisible books">
+              <tr><td><img src="https://images-na.ssl-images-amazon.com/images/I/51ExA-wU3BL._SX357_BO1,204,203,200_.jpg"></td> <td><i>Logicomix: An Epic Search for Truth</i> by Christos Papadimitriou. Graphic novel about Bertrand Russell and the foundations of mathematics.</td></tr>
+              <tr><td><img src="https://images-na.ssl-images-amazon.com/images/I/41h7ZBPdyjL._SX329_BO1,204,203,200_.jpg"></td> <td><i>The Golden Ticket</i> by Lance Fortnow. Popular account of P and NP and the history and future of the question.</td></tr>
+            </table>
+          </div> <!-- content -->
+        </div> <!-- column -->
+      </div> <!-- columns -->
+    </div> <!-- container -->
+  </section>
+  
+</body>
+</html>
