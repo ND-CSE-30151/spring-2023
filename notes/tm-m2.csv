@@ -1,0 +1,7 @@
+       ,0       ,x           ,_          
+>q1    ,"q2,_,R","reject,x,R","reject,_,R"
+ q2    ,"q3,x,R","q2,    x,R","accept,_,R"
+ q3    ,"q4,0,R","q3,    x,R","q5,    _,L"
+ q4    ,"q3,x,R","q4,    x,R","reject,_,R"
+ q5    ,"q5,0,L","q5,    x,L","q2,    _,R"
+@accept,        ,         ,
